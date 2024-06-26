@@ -1,0 +1,1877 @@
+[0;36mafl-fuzz [1;97m2.56b[0m by <lcamtuf@google.com>
+[1;92m[+] [0mLooks like we're not running on a tty, so I'll be a bit less verbose.[0m
+[1;92m[+] [0mYou have 72 CPU cores and 9 runnable tasks (utilization: 12%).[0m
+[1;92m[+] [0mTry parallel jobs - see docs/parallel_fuzzing.txt.[0m
+[1;94m[*] [0mChecking CPU core loadout...[0m
+[1;92m[+] [0mFound a free CPU core, binding to #0.[0m
+[1;94m[*] [0mChecking core_pattern...[0m
+[1;94m[*] [0mChecking CPU scaling governor...[0m
+[1;94m[*] [0mSetting up output directories...[0m
+[1;92m[+] [0mOutput directory exists but deemed OK to reuse.[0m
+[1;94m[*] [0mDeleting old session data...[0m
+[1;92m[+] [0mOutput dir cleanup successful.[0m
+[1;94m[*] [0mScanning 'in-origin/'...[0m
+[1;92m[+] [0mNo auto-generated dictionary tokens to reuse.[0m
+[1;94m[*] [0mCreating hard links for all input files...[0m
+[1;94m[*] [0mLoading extra dictionary from 'ftp.dict' (level 0)...[0m
+[1;92m[+] [0mLoaded 31 extra tokens, size range 3 B to 4 B.[0m
+[1;94m[*] [0mValidating target binary...[0m
+[1;94m[*] [0mAttempting dry run with 'id:000000,orig:ftp_requests_full_all.raw'...[0m
+[1;94m[*] [0mSpinning up the fork server...[0m
+[1;92m[+] [0mAll right - fork server is up.[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+451 Error: No such file or directory.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+451 Error: No such file or directory.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+451 Error: No such file or directory.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+451 Error: No such file or directory.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+451 Error: No such file or directory.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+451 Error: No such file or directory.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+451 Error: No such file or directory.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+451 Error: No such file or directory.
+
+[0m
+[1;90m    len = 77, map size = 479, exec speed = 89655 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000001,orig:ftp_requests_full_anonymous.raw'...[0m
+[1;94m[*] [0mafter send: USER anonymous
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðu!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ð32,209!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðu!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ð32,209!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðu!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ð32,209!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðu!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ð32,209!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðu!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ð32,209!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðu!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ð32,209!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðu!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ð32,209!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðu!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ð32,209!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;90m    len = 70, map size = 432, exec speed = 80922 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000002,orig:seed_8.raw'...[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,200,219)
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,200,219)
+
+[0m
+[1;93m[!] [1;97mWARNING: [0mTest case results in a timeout (skipping)[0m
+[1;94m[*] [0mAttempting dry run with 'id:000003,orig:seed_9.raw'...[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||43187|)
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||43187|)
+
+[0m
+[1;93m[!] [1;97mWARNING: [0mTest case results in a timeout (skipping)[0m
+[1;93m[!] [1;97mWARNING: [0mSkipped 2 test cases (50.00%) due to timeouts.[0m
+[1;93m[!] [1;97mWARNING: [0m[1;91mHigh percentage of rejected test cases, check settings![0m
+[1;92m[+] [0mAll test cases processed.[0m
+
+[1;93m[!] [1;97mWARNING: [0m[1;91mThe target binary is pretty slow! See docs/perf_tips.txt.[0m
+[1;92m[+] [0mHere are some useful stats:
+
+[1;90m    Test case count : [0m2 favored, 0 variable, 4 total
+[1;90m       Bitmap range : [0m0 to 479 bits (average: 455.50 bits)
+[1;90m        Exec timing : [0m0 to 89.7k us (average: 85.3k us)
+[0m
+[1;92m[+] [0mAll set and ready to roll![0m
+[1;94m[*] [0mafter send: UShR ubuntuð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: UShR ubuntuð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PAS·€íð 
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: üü€ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: 4ð¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USE 
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USE"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: ‚‚‚‚‚‚‚‚‚‚k‚‚‚‚‚‚‚‚‚‚‚‚‚USER ubuntu
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‚‚‚‚‚‚‚‚‚‚k‚‚‚‚‚‚‚‚‚‚‚‚‚USER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ðorig:seed_0
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‚‚‚‚‚‚‚‚‚‚k‚‚‚‚‚‚‚‚‚‚‚‚‚USER ubuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‚‚‚‚‚‚‚‚‚‚k‚‚‚‚‚‚‚‚‚‚‚‚‚USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‚‚‚‚‚‚‚‚‚‚k‚‚‚‚‚‚‚‚‚‚‚‚‚USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ðK¯
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‚‚‚‚‚‚‚‚‚‚k‚‚‚‚‚‚‚‚‚‚‚‚‚USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‚‚‚‚‚‚‚‚‚‚k‚‚‚‚‚‚‚‚‚‚‚‚‚USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ð
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‚‚‚‚‚‚‚‚‚‚k‚‚‚‚‚‚‚‚‚‚‚‚‚USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: CCðú˜
+[0m
+)B[?25h[0m[1;91m
+[-] PROGRAM ABORT : [1;97mUnable to communicate with fork server in send_over_net[1;91m
+         Location : [0msend_over_network_new(), afl-fuzz.c:1084
+

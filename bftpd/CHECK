@@ -1,0 +1,8312 @@
+[0;36mafl-fuzz [1;97m2.56b[0m by <lcamtuf@google.com>
+[1;92m[+] [0mLooks like we're not running on a tty, so I'll be a bit less verbose.[0m
+[1;92m[+] [0mYou have 72 CPU cores and 9 runnable tasks (utilization: 12%).[0m
+[1;92m[+] [0mTry parallel jobs - see docs/parallel_fuzzing.txt.[0m
+[1;94m[*] [0mChecking CPU core loadout...[0m
+[1;92m[+] [0mFound a free CPU core, binding to #0.[0m
+[1;94m[*] [0mChecking core_pattern...[0m
+[1;94m[*] [0mChecking CPU scaling governor...[0m
+[1;94m[*] [0mSetting up output directories...[0m
+[1;92m[+] [0mOutput directory exists but deemed OK to reuse.[0m
+[1;94m[*] [0mDeleting old session data...[0m
+[1;92m[+] [0mOutput dir cleanup successful.[0m
+[1;94m[*] [0mScanning 'in-origin/'...[0m
+[1;92m[+] [0mNo auto-generated dictionary tokens to reuse.[0m
+[1;94m[*] [0mCreating hard links for all input files...[0m
+[1;94m[*] [0mLoading extra dictionary from 'ftp.dict' (level 0)...[0m
+[1;92m[+] [0mLoaded 31 extra tokens, size range 3 B to 4 B.[0m
+[1;94m[*] [0mValidating target binary...[0m
+[1;94m[*] [0mAttempting dry run with 'id:000000,orig:ftp_requests_full_all.raw'...[0m
+[1;94m[*] [0mSpinning up the fork server...[0m
+[1;92m[+] [0mAll right - fork server is up.[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:34001 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;90m    len = 77, map size = 479, exec speed = 63999 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000001,orig:ftp_requests_full_anonymous.raw'...[0m
+[1;94m[*] [0mafter send: USER anonymous
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;94m[*] [0mafter send: USER anonymous
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,152,193
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+215 UNIX Type: L8
+257 "/" is the current working directory.
+200 PORT 127.0.0.1:39105 OK
+425-Unable to establish data connection.
+425 Connection refused.
+
+[0m
+[1;90m    len = 70, map size = 433, exec speed = 79909 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000002,orig:seed_8.raw'...[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,147,93)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,147,93)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,147,93)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,157,241)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,157,241)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,157,241)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,176,45)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,176,45)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,176,45)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,203,117)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,203,117)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,203,117)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,227,221)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,227,221)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,227,221)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,182,69)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,182,69)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,182,69)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,193,33)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,193,33)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,193,33)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,192,113)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,192,113)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,192,113)
+
+[0m
+[1;90m    len = 52, map size = 453, exec speed = 49460 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000003,orig:seed_9.raw'...[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||44805|)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||44805|)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||44805|)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||37131|)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||37131|)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||37131|)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||37887|)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||37887|)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||37887|)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||45859|)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||45859|)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||45859|)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||38999|)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||38999|)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||38999|)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||52771|)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||52771|)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||52771|)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||60249|)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||60249|)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||60249|)
+
+[0m
+[1;94m[*] [0mafter send: USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: EPSV
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: STAT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||38691|)
+
+[0m
+[1;94m[*] [0mafter send: QUIT
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||38691|)
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+230 User logged in.
+229 Entering extended passive mode (|||38691|)
+
+[0m
+[1;90m    len = 52, map size = 427, exec speed = 47958 us
+[0m[1;92m[+] [0mAll test cases processed.[0m
+
+[1;93m[!] [1;97mWARNING: [0m[1;91mThe target binary is pretty slow! See docs/perf_tips.txt.[0m
+[1;92m[+] [0mHere are some useful stats:
+
+[1;90m    Test case count : [0m4 favored, 0 variable, 4 total
+[1;90m       Bitmap range : [0m427 to 479 bits (average: 448.00 bits)
+[1;90m        Exec timing : [0m48.0k to 79.9k us (average: 60.3k us)
+[0m
+[1;92m[+] [0mAll set and ready to roll![0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  THELP
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " THE"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: è!Pè!W€äß
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "è!Pè!W€"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "è!Pè!W€"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "è!Pè!W€"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "è!Pè!W€"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "è!Pè!W€"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "è!Pè!W€"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: US@R ubunt}
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "US@R ubunt}"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "US@R ubunt}"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "US@R ubunt}"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "US@R ubunt}"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "US@R ubunt}"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "US@R ubunt}"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "US@R ubunt}"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: ‡ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‡PASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‡PASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‡PASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‡PASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‡PASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "‡PASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Ãğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÃPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÃPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÃPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÃPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÃPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÃPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Fğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "FPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "FPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "FPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "FPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "FPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "FPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: U
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USUUUUUUUUUu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USUUUUUUUUUu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USUUUUUUUUUu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USUUUUUUUUUu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USUUUUUUUUUu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USUUUUUUUUUu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USUUUUUUUUUu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USUUUUUUUUUu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Fÿ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "F"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "F"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "F"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "F"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "F"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "F"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "F"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYSTğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+215 UNIX Type: L8
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Eğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 
+ğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: çÿ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Rÿÿÿğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RÿÿÿPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RÿÿÿPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RÿÿÿPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RÿÿÿPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RÿÿÿPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RÿÿÿPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: dkJR uDELEbuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "dkJR uDELEbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "dkJR uDELEbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "dkJR uDELEbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "dkJR uDELEbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "dkJR uDELEbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "dkJR uDELEbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "dkJR uDELEbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: uSESTOSESTOR9REbğô!˜÷
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "uSESTOSESTOR9REbPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "uSESTOSESTOR9REbPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "uSESTOSESTOR9REbPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "uSESTOSESTOR9REbPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "uSESTOSESTOR9REbPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "uSESTOSESTOR9REbPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Uf4—b
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "Uf4"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "Uf4"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "Uf4"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "Uf4"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "Uf4"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "Uf4"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Oğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UauõFTŠ€ÿŠğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UauõFTŠ€ÿŠPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Oğ¶°
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "OPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USEo USER ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USEo USER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USEo USER ubuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USEo USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USEo USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USEo USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USEo USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "USEo USER ubuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send:  RMSSHELPIZ1ERMSSIZ1ER ubuntu
+ğ1
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+
+[0m
+[1;94m[*] [0mafter send:  ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: DSER wbuntu
+ğat!
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: " RMSSHELPIZ1ERMSSIZ1ER ubuntu"
+500 Unknown command: " ubuntu"
+500 Unknown command: "DSER wbuntu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u€
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: tUttHELPt
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "tUttHELP"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "tUttHELP"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "tUttHELP"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "tUttHELP"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "tUttHELP"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "tUttHELP"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER uÓuSIZEntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Eğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "EPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 2ĞĞĞĞĞĞÿÿôğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "2ĞĞĞĞĞĞÿÿôPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: 'USERBğ 
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "'USERBPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "'USERBPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "'USERBPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "'USERBPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "'USERBPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "'USERBPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: íííáííííRíííRğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "íííáííííRíííRPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "íííáííííRíííRPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "íííáííííRíííRPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "íííáííííRíííRPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "íííáííííRíííRPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "íííáííííRíííRPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: ubu†t
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ubu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ubu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ubu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ubu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ubu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ubu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ubu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USERETRR mbub^u
+ğ÷
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: UUSERSER uSYSTu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UUSERSER uSYSTu"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UUSERSER uSYSTu"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UUSERSER uSYSTu"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UUSERSER uSYSTu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UUSERSER uSYSTu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UUSERSER uSYSTu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "UUSERSER uSYSTu"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: ÏÏÏÏÏåÏÏÏÏåÏÏÏRÏÏdÏ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÏÏÏÏÏåÏÏÏÏåÏÏÏRÏÏ"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÏÏÏÏÏåÏÏÏÏåÏÏÏRÏÏ"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÏÏÏÏÏåÏÏÏÏåÏÏÏRÏÏ"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÏÏÏÏÏåÏÏÏÏåÏÏÏRÏÏ"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÏÏÏÏÏåÏÏÏÏåÏÏÏRÏÏ"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ÏÏÏÏÏåÏÏÏÏåÏÏÏRÏÏ"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: RTÿTQPÿó$TètLÿ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RTÿTQPÿó$Tèt"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RTÿTQPÿó$Tèt"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RTÿTQPÿó$Tèt"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RTÿTQPÿó$Tèt"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RTÿTQPÿó$Tèt"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "RTÿTQPÿó$Tèt"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Uÿu
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER u
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USERPROT ubuntu-
+ğ×
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: AUG(”SER
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "AUG(”S"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "AUG(”S"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "AUG(”S"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "AUG(”S"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "AUG(”S"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "AUG(”S"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "AUG(”S"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "LI"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "LI"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "LI"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "LI"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "LI"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "LI"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: Ü
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: USER ubuat
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+331 Password please.
+530 Login incorrect.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: q
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: C
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: ""
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: ŒŒŒğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ŒŒŒPASS ubuntu"
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ŒŒŒPASS ubuntu"
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ŒŒŒPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ŒŒŒPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ŒŒŒPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "ŒŒŒPASS ubuntu"
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: U€ER uREST)ÿ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: U€ER uREST)ÿ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: SYST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+
+[0m
+[1;94m[*] [0mafter send: PWD
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: PORT 127,0,0,1,132,209
+ğ¬
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: LIST
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: MKD test
+ğ
+[0m
+[1;94m[*] [0mafter recv: 220 bftpd 5.2 at 127.0.0.1 ready.
+500 Unknown command: "U€ER uREST)"
+503 USER expected.
+215 UNIX Type: L8
+503 USER expected.
+503 USER expected.
+503 USER expected.
+503 USER expected.
+
+[0m
+[1;94m[*] [0mafter send: U€ER uREST)ÿ
+[0m
+[1;94m[*] [0mafter recv: (null)
+[0m
+[1;94m[*] [0mafter send: PASS ubuntu
+ğ
+[0m
+[?25h[1;91m
+
++++ Testing aborted by user +++
+[0m[1;92m[+] [0mWe're done here. Have a nice day!
+[0m
