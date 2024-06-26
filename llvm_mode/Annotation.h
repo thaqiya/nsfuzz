@@ -12,7 +12,7 @@
 #include <llvm/Support/Path.h>
 #include <string>
 #include <llvm/Support/Debug.h>
-
+#include <llvm/ADT/StringRef.h>
 #include "Common.h"
 
 #define DEFAULT_SVLIST_PATH "/tmp/sv_list_temp"

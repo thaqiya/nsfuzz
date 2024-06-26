@@ -25,6 +25,7 @@
 #include <llvm/Support/Path.h>
 #include <llvm/IR/InstIterator.h>
 #include <llvm/IR/Instructions.h>
+#include <llvm/ADT/StringRef.h>
 
 #include <memory>
 #include <vector>

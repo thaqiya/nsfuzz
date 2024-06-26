@@ -23,11 +23,11 @@
 #include <llvm/ADT/SmallVector.h>
 #include <llvm/ADT/SmallPtrSet.h>
 #include <llvm/Transforms/Utils/Local.h>
-
+#include <llvm/IR/DerivedTypes.h>
 #include "Annotation.h"
 #include "Flags.h"
 #include "Common.h"
-
+#include <llvm/ADT/StringRef.h>
 using namespace llvm;
 
 #define Diag llvm::errs()

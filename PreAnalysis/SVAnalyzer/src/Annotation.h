@@ -12,7 +12,7 @@
 #include <llvm/Support/Path.h>
 #include <string>
 #include <llvm/Support/Debug.h>
-
+#include <llvm/ADT/StringRef.h>
 #include "Common.h"
 
 #define MD_TaintSrc   "taint_src"
