@@ -1,8 +1,7 @@
 #!/bin/bash
 
 set -x
-
-CLANG=${CLANG:-clang}
+CLANG=${CLANG:-"/magma_out/fuzzer_repo/llvmorg-9.0.1/bin/clang"}
 $CLANG $@
 
 PATTERN1='-o [^ ]*\.o'
