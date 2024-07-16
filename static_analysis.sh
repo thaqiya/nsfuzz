@@ -5,7 +5,9 @@ set -x
 mkdir -p state_variable
 mkdir -p sync_point
 mkdir -p analysis_time
+find /magma_out/fuzzer_repo/bftpd/ -name "*.llbc" > bitcode.list
 
+echo "bitcode list"
 echo "Processing bftpd..."
 sudo python3 /magma_out/fuzzer_repo/PreAnalysis/SVAnalyzer/get_backtrace.py --sut_path /magma_run/bftpd --sut_option "-D -c /magma/targets/bftpd/run/basic.conf" --port 2100
 start=`date +%s.%N`
